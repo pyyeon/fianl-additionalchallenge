@@ -1,6 +1,6 @@
-package V2;
+package jungmin.kdelivery.V1;
 
-import java.util.Objects;
+import java.util.HashMap;
 
 public class Shop {
     /**
@@ -11,48 +11,39 @@ public class Shop {
     private static final String EMPTY_FOOD = "";
     private static final int EMPTY_PRICE = 0;
     private String shopName;
-    private static String[] foodNames;
-    private static int[] prices;
+
+    private HashMap<String, Integer> shopMenus;
 
     /**
      * @Shop() : 생성자 정의
      * 매장만 먼저 입력받도록 합니다.
      * 나머지 변수는 initValues() 에서 정의합니다.
      */
-    Shop(String shopName, String[] foodNames) {
+    public Shop(String shopName) {
         this.shopName = shopName;
-        initValues();
+        this.shopMenus = new HashMap<>();
     }
 
     /**
      * @initValues() : 메뉴명와 가격정보를 담는 배열 생성 및 초기화
      * EMPTY_FOOD = "", EMPTY_PRICE = 0
      */
-    static void initValues() {
-        foodNames = new String[FOOD_MAX];
-        prices = new int[FOOD_MAX];
 
-        for (int i = 0; i < foodNames.length; i++) {
-            foodNames[i] = EMPTY_FOOD;
-            prices[i] = EMPTY_PRICE;
-        }
-
-    }
 
     /**
+     * @return
      * @addFood() : 위 코드에서 정의된 변수를 받아 출력과 객체에 저장합니다.
      */
-
-    static void addFood(String foodName, int price) {
-        //음식 등록?
-        //이미 있는지 검사
-        for (int i = 0; i < foodNames.length; i++) {
-            if (Objects.equals(foodNames[i], EMPTY_FOOD)) {
-             continue;
+    void addFood(String foodName, int price) {
+//음식추가 음식점개수는 SHOP_MAX넘지 않을때까지
+        //shopName에 음식이름이랑 가격 저장
+        for (int i = 0; i < FOOD_MAX; i++) {
+            if (shopMenus.containsKey(foodName)){
+                return ;
             }
-            foodNames[i] = foodName;
-            prices[i] = price;
+            shopMenus.put(foodName, price);
         }
-
     }
+
+
 }

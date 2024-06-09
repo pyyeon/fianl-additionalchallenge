@@ -1,4 +1,4 @@
-package V2;
+package jungmin.kdelivery.V1;
 
 public class Order {
   private String customerName;
@@ -8,10 +8,10 @@ public class Order {
   /**
   *@Order():주문 정보를 저장합니다.
   **/
-  Order(String customerName, String shopName, String foodName){
+  public Order(String customerName, String shopName, String foodName) {
     this.customerName = customerName;
     this.shopName = shopName;
     this.foodName = foodName;
-  }
+  }}
 
-}
+
