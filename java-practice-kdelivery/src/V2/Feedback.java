@@ -1,4 +1,4 @@
-package jungmin.kdelivery.V1;
+package V2;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -38,7 +38,7 @@ public class Feedback {
     ratingOptions.put(5, "★★★★★");
     String stars = (String) ratingOptions.get(score);
 
-return stars;  //입력한 숫자 ->key(키값)
+    return stars;  //입력한 숫자 ->key(키값)
   }
 
   /**
