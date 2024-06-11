@@ -37,7 +37,8 @@ public class YoutubeSub_V2 {
         return true;
     }
 
-
+    // 키에 해당하는 단어가 있으면 키값으로 변경
+    // entryset > Map에서 모든 Entry(Key-Value)를 가져와 Set객체로 반환
     public static String purifySubtitle(String subtitle) {
         for (Map.Entry<String, String> entry : wordPurification.entrySet()) {
             subtitle = subtitle.replace(entry.getKey(), entry.getValue());
