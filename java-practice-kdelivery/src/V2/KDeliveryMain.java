@@ -1,4 +1,6 @@
-package jungmin.kdelivery.V1;
+package V2;
+
+
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -110,7 +112,7 @@ public class KDeliveryMain {
             System.out.print(">>>");
             int price = s.nextInt();
 
-            //5번까지 받기
+
             for (Shop value : shops) {//shops를 돌면서 해당가게가 존재하는지 찾아야함
                 Shop shop = null;
                 if (value.equals(shopName)) {//shopName == 기존의 shop객체의 shopName이 일치하지 않을때만 새로 생성
@@ -148,6 +150,9 @@ public class KDeliveryMain {
      */
 
     static void selectDashboardMenu() {
+        //feedback정보 얻음
+        //전체 별점
+        // 있으면 출력하고 없으면 넘김
         //주문자, 매장명, 메뉴, 별점 확인
         //feedbacks에 넣어둔걸 출력하는 메소드로 출력할거야.
         for (Feedback feedback : feedbacks) {
