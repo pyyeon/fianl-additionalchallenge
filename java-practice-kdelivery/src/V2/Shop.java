@@ -1,4 +1,4 @@
-package jungmin.kdelivery.V1;
+package V2;
 
 import java.util.HashMap;
 
@@ -35,7 +35,6 @@ public class Shop {
      * @addFood() : 위 코드에서 정의된 변수를 받아 출력과 객체에 저장합니다.
      */
     void addFood(String foodName, int price) {
-//음식추가 음식점개수는 SHOP_MAX넘지 않을때까지
         //shopName에 음식이름이랑 가격 저장
         for (int i = 0; i < FOOD_MAX; i++) {
             if (shopMenus.containsKey(foodName)){
